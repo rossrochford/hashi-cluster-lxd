@@ -1,0 +1,41 @@
+[hashi_server_1]
+10.150.19.10 ansible_connection=lxd
+
+[hashi_servers]
+10.150.19.10 ansible_connection=lxd
+10.150.19.11 ansible_connection=lxd
+10.150.19.12 ansible_connection=lxd
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
+ansible_connection=lxd
+
+
+container ansible_host=lxdhost:container ansible_connection=lxd
+
+
+# note we can also set connection type per host:
+#[targets]
+#localhost              ansible_connection=local
+#other1.example.com     ansible_connection=ssh        ansible_user=mpdehaan
+#other2.example.com     ansible_connection=ssh        ansible_user=mdehaan
+
+
+# see ansible.cfg example:
+# https://dev.to/livioribeiro/using-lxd-and-ansible-to-simulate-infrastructure-2g8l#step-2-nomad
+# https://github.com/livioribeiro/nomad-lxd-ansible/blob/master/inventory/hosts
+# https://github.com/livioribeiro/nomad-lxd-ansible/blob/master/ansible.cfg
+
+# https://antonneld.wordpress.com/2019/01/02/setting-up-my-lxd-containers-with-ansible-playbooks/
+
+#https://docs.ansible.com/ansible/latest/collections/community/general/lxd_container_module.html#lxd-container-module
+
+
+# recommended format for container hosts:
+#       mycontainer  ansible_connection=lxd ansible_host=otherhost:mycontainer
+#       container ansible_host=lxdhost:container ansible_connection=lxd
+# or at very minimum:
+#       mycontainer ansible_connection=lxd
+
+
+# follow this when debugging ansible's ssh config: https://github.com/peopledoc/ansible-ssh-agent

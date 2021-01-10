@@ -1,0 +1,25 @@
+[hashi_server_1]
+hashi-server-1 ansible_host=10.150.19.10 ansible_connection=ssh
+
+[hashi_servers]
+hashi-server-1 ansible_host=10.150.19.10 ansible_connection=ssh
+hashi-server-2 ansible_host=10.150.19.11 ansible_connection=ssh
+hashi-server-3 ansible_host=10.150.19.12 ansible_connection=ssh
+
+[hashi_clients]
+hashi-client-1 ansible_host=10.150.19.13 ansible_connection=ssh
+hashi-client-2 ansible_host=10.150.19.14 ansible_connection=ssh
+
+[vault_servers]
+vault-server-1 ansible_host=10.150.19.15 ansible_connection=ssh
+
+[vault_server_1]
+vault-server-1 ansible_host=10.150.19.15 ansible_connection=ssh
+
+[traefik]
+traefik-1 ansible_host=10.150.19.16 ansible_connection=ssh
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
+ansible_connection=ssh
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'

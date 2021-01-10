@@ -1,0 +1,3 @@
+build_lxd/infrastructure/terraform.tfstate*
+build_lxd/infrastructure/.terraform*
+

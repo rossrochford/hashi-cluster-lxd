@@ -1,0 +1,23 @@
+[
+  {
+    "name": "hashi-server-1",
+    "node_type": "hashi_server",
+    "tags": ["consul-server", "nomad-server", "hashi-server-1"],
+    "vm_memory": 800,
+    "ip": "10.150.19.10"
+  },
+  {
+    "name": "hashi-server-2",
+    "node_type": "hashi_server",
+    "tags": ["consul-server", "nomad-server"],
+    "vm_memory": 800,
+    "ip": "10.150.19.11"
+  },
+  {
+    "name": "hashi-server-3",
+    "node_type": "hashi_server",
+    "tags": ["consul-server", "nomad-server"],
+    "vm_memory": 800,
+    "ip": "10.150.19.12"
+  }
+]

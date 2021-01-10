@@ -1,0 +1,24 @@
+[hashi_server_1]
+hashi-server-1 ansible_host=hashi-server-1 ansible_connection=lxd
+
+[hashi_servers]
+hashi-server-1 ansible_host=hashi-server-1 ansible_connection=lxd
+hashi-server-2 ansible_host=hashi-server-2 ansible_connection=lxd
+hashi-server-3 ansible_host=hashi-server-3 ansible_connection=lxd
+
+[hashi_clients]
+hashi-client-1 ansible_host=hashi-client-1 ansible_connection=lxd
+hashi-client-2 ansible_host=hashi-client-2 ansible_connection=lxd
+
+[vault_servers]
+vault-server-1 ansible_host=vault-server-1 ansible_connection=lxd
+
+[vault_server_1]
+vault-server-1 ansible_host=vault-server-1 ansible_connection=lxd
+
+[traefik]
+traefik-1 ansible_host=traefik-1 ansible_connection=lxd
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
+ansible_connection=lxd
